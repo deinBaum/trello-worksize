@@ -10,6 +10,37 @@
 </head>
 <body>
   <h1>Work Size</h1>
-  <p>Hier wird später das Textfeld für die Arbeitsgröße und weitere Funktionen angezeigt.</p>
+  <label for="workSizeInput">Work size (Stunden):</label><br />
+  <input id="workSizeInput" type="text" pattern="[0-9.,]*" placeholder="z.B. 3,5" /><br />
+
+  <div id="recentSizes">
+    <p>Letzte Werte:</p>
+    <button class="recentBtn">1</button>
+    <button class="recentBtn">2,5</button>
+    <button class="recentBtn">4</button>
+    <button class="recentBtn">6,75</button>
+    <button class="recentBtn">8</button>
+    <button class="recentBtn">10</button>
+  </div>
+  
+  <button id="applyBtn">Apply</button>
+  <button id="resetBtn">Reset</button>
+
+  <script>
+    // Buttons mit Klick belegen: schreibt Wert ins Inputfeld
+    document.querySelectorAll('.recentBtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('workSizeInput').value = btn.textContent;
+      });
+    });
+
+    // Apply & Reset brauchen später Trello API Logik, hier vorerst nur Alerts
+    document.getElementById('applyBtn').addEventListener('click', () => {
+      alert('Apply: ' + document.getElementById('workSizeInput').value);
+    });
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      document.getElementById('workSizeInput').value = '0';
+    });
+  </script>
 </body>
 </html>
