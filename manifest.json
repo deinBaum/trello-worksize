@@ -1,9 +1,9 @@
 {
-  "name": "Work Size Tracker",
-  "description": "Add numeral values (e.g. hours) to cards and get summarized values per user of the board.",
+  "name": "Job Size Tracker",
+  "description": "Add job size estimations to cards and track how much is estimated for each user on the board.",
   "author": "Marius Murtz",
   "version": "0.1",
-  "icon": "https://deinbaum.github.io/trello-worksize/appicon.png",
+  "icon": "https://deinbaum.github.io/trello-jobsize/appicon.png",
   "capabilities": [
     "board-buttons",
     "card-buttons",

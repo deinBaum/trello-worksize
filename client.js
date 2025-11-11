@@ -1,15 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-  window.TrelloPowerUp.initialize({
+window.TrelloPowerUp.initialize({
   'card-back-section': function(t, options) {
     return {
-      title: 'Work Size',
-      icon: 'https://deinbaum.github.io/trello-worksize/appicon.png',
+      title: 'Job Size',
+      icon: 'https://deinbaum.github.io/trello-jobsize/appicon.png',
       content: {
         type: 'iframe',
-        url: 'https://deinbaum.github.io/trello-worksize/index.html',
+        url: 'https://deinbaum.github.io/trello-jobsize/index.html',
         height: 230
       }
     };
   }
-});
 });
