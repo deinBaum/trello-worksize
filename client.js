@@ -1,4 +1,5 @@
-window.TrelloPowerUp.initialize({
+document.addEventListener('DOMContentLoaded', function() {
+  window.TrelloPowerUp.initialize({
   'card-back-section': function(t, options) {
     return {
       title: 'Work Size',
@@ -10,4 +11,6 @@ window.TrelloPowerUp.initialize({
       }
     };
   }
+});
+
 });
