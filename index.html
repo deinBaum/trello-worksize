@@ -45,7 +45,8 @@
         });
       });
 
-      var t = window.TrelloPowerUp.iframe();
+      var t = TrelloPowerUp.iframe();
+
 
       // Wert aus dem Card-Objekt laden (wenn vorhanden)
       t.get("card", "shared", "jobsize").then(function (savedValue) {
