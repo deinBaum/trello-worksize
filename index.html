@@ -32,7 +32,7 @@
     </div>
 
     <script>
-      console.log("YAY Bugfixing!");
+      var t = window.TrelloPowerUp.iframe();exports
 
       // Buttons mit Klick belegen: schreibt Wert ins Inputfeld
       document.querySelectorAll(".recentBtn").forEach((btn) => {
@@ -40,8 +40,6 @@
           document.getElementById("jobSizeInput").value = btn.textContent;
         });
       });
-
-      var t = window.TrelloPowerUp;
 
       // Wert aus dem Card-Objekt laden (wenn vorhanden)
       t.get("card", "shared", "jobsize").then(function (savedValue) {
@@ -54,7 +52,6 @@
       document.getElementById("applyBtn").addEventListener("click", function () {
         var newValue = document.getElementById("jobSizeInput").value;
         t.set("card", "shared", "jobsize", newValue).then(function () {
-          // t.closeModal(); // Nur bei eigenen Popups nötig, ansonsten ignorieren oder auskommentieren
         });
       });
 
